@@ -51,12 +51,11 @@ Citizen.CreateThread(function()
                     SetEntityCoords(playerPed, jailCoords.x, jailCoords.y, jailCoords.z)
                 end
 
-                -- I know, messy but it works
+                -- I know, messy but fuck that, it works
                 if jailTime == 1 then
                     TriggerEvent('chatMessage', Config.Prefix .. "You have ^11^3 second left in jail...")
                 elseif jailTime < 6 then
-                    TriggerEvent('chatMessage',
-                        Config.Prefix .. "You have ^1" .. jailTime .. "^3 seconds left in jail...")
+                    TriggerEvent('chatMessage', Config.Prefix .. "You have ^1" .. jailTime .. "^3 seconds left in jail...")
                 elseif jailTime == 15 then
                     TriggerEvent('chatMessage', Config.Prefix .. "You have ^115^3 seconds left in jail...")
                 elseif jailTime == 60 then
